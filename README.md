@@ -1,4 +1,4 @@
-# Kernel-Propagation-in-Graph-Neural-Networks
+# Kernel-Propagation-in-Graph-Neural-Networks (KP-GNN)
 
 This is the official repository of the paper titled, "Node Classification using Kernel Propagation in Graph Neural Networks" which is currently under review in the journal Expert Systems with Applications.
 
