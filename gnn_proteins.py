@@ -359,10 +359,10 @@ def main():
     T_Power = T_summer(TT, 0.99)  # Two-hop Graph Transition ## uncomment if anything other than pubmed
     T_Power = normalize_adj(T_Power)
     T_Power = sparse_mx_to_torch_sparse_tensor(T_Power)
-    torch.save(T_Power, 'ogbn-proteins-summed-T.pt')
-    # T_Power = torch.load('ogbn-proteins-summed-T.pt')
+    torch.save(T_Power, 'ogbn-proteins_T_Power.pt')
+    # T_Power = torch.load('ogbn-proteins_T_Power.pt')
     # data.x = T_Power
-    # data.x = sparse_mx_to_torch_sparse_tensor(sp.csr_matrix(data.x))
+    data.x = sparse_mx_to_torch_sparse_tensor(sp.csr_matrix(data.x))
     data.x = torch.cat([T_Power,data.x],1)
     torch.save(data, 'ogbn-proteins_{}_{}.pt'.format(args.hidden_channels, args.model))
 
