@@ -361,9 +361,9 @@ def main():
     TT = graph_srw_transition_matrix(A)  # Graph Transition Matrix
     T_Power = T_summer(TT, 0.99)  # Two-hop Graph Transition ## uncomment if anything other than pubmed
     T_Power = normalize_adj(T_Power)
-    T_power = sparse_mx_to_torch_sparse_tensor(T_Power) ## change variable name to data.x in order to use only T_Power as node features
-    # torch.save(T_Power, 'ogbn-products-summed-T.pt')
-    # T_Power = torch.load('ogbn-products-summed-T.pt')
+    T_Power = sparse_mx_to_torch_sparse_tensor(T_Power) ## change variable name to data.x in order to use only T_Power as node features
+    torch.save(T_Power, 'ogbn-products_T_Power.pt')
+    # T_Power = torch.load('ogbn-products_T_Power.pt')
 
     data.x = sparse_mx_to_torch_sparse_tensor(sp.csr_matrix(data.x))
     data.x = torch.cat([T_Power,data.x],1) ## concatenates node features with higher -order structural features (T_Power)
