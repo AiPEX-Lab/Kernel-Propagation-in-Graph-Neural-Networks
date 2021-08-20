@@ -1,6 +1,6 @@
 # Kernel-Propagation-in-Graph-Neural-Networks (KP-GNN)
 
-This is the official repository of the paper titled, [Node Classification using Kernel Propagation in Graph Neural Networks](https://www.sciencedirect.com/science/article/pii/S0957417421000968) Expert Systems with Applications, Volume 174, 15 July 2021, DOI: 10.1016/j.eswa.2021.114655. 
+This is the official repository of the paper titled, [Node Classification using Kernel Propagation in Graph Neural Networks](https://www.sciencedirect.com/science/article/pii/S0957417421000968), Expert Systems with Applications, Volume 174, 15 July 2021, DOI: 10.1016/j.eswa.2021.114655. 
 
 ## To generate the results as reported in the paper for the large-scale real world OGB networks, please follow the following instructions:
 
